@@ -21,9 +21,9 @@ def message_customer(message, ack, say):
     # send different links based on channel. Message fields here: https://api.slack.com/events/message
     text = f""
     if message['channel'] == graphing_id:
-        text = f":wave: Hey there <@{message['user']}>! Please take a moment to *go through <https://datadoghq.atlassian.net/wiki/spaces/TS/pages/2245853726/Escalation+workflow+for+troubleshooting+dashboard+dataviz+notebooks+issues|our escalation workflow wiki> first*. When you are finished, react to your own post with:"
+        text = f":wave: Hey <@{message['user']}>! Please take a moment to *go through <https://datadoghq.atlassian.net/wiki/spaces/TS/pages/2245853726/Escalation+workflow+for+troubleshooting+dashboard+dataviz+notebooks+issues|our escalation workflow wiki> first*. When you are finished, react to your own post with:"
     if message['channel'] == aaa_id:
-        text = f":wave: Hey there <@{message['user']}>! Please take a moment to *go through <https://datadoghq.atlassian.net/wiki/spaces/TS/pages/2260729945/Escalation+workflow+for+AAA+Authentication+Access+Control+and+Auditability+Issues|our escalation workflow wiki> first*. When you are finished, react to your own post with:"
+        text = f":wave: Hey <@{message['user']}>! Please take a moment to *go through <https://datadoghq.atlassian.net/wiki/spaces/TS/pages/2260729945/Escalation+workflow+for+AAA+Authentication+Access+Control+and+Auditability+Issues|our escalation workflow wiki> first*. When you are finished, react to your own post with:"
 
     if 'thread_ts' not in message:
         # say() sends a message to the channel where the event was triggered
@@ -44,7 +44,7 @@ def message_customer(message, ack, say):
                     }
                 }
             ],
-            text=f":wave: Hey there <@{message['user']}>! Please take a moment to *go through <https://datadoghq.atlassian.net/wiki/spaces/TS/pages/2245853726/Escalation+workflow+for+troubleshooting+dashboard+dataviz+notebooks+issues|our escalation workflow wiki> first*.",
+            text=f":wave: Hey <@{message['user']}>! Please take a moment to *go through <https://datadoghq.atlassian.net/wiki/spaces/TS/pages/2245853726/Escalation+workflow+for+troubleshooting+dashboard+dataviz+notebooks+issues|our escalation workflow wiki> first*.",
             thread_ts=message['ts']
         )
 
