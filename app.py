@@ -33,7 +33,7 @@ def message_customer(message, ack, say):
                     "type": "section",
                     "text": {
                         "type": "mrkdwn",
-                        "text": {text}
+                        "text": f"{text}"
                     }
                 },
                 {
