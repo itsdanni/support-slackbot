@@ -6,7 +6,7 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_bolt.util.utils import create_web_client
 from slack_sdk.web import client
 
-# define channel IDs
+# define channel IDs. These are ID values in my test slack space. These values should be replaced with IDs for support-aaa and support-dashboard-dataviz
 graphing_id = "C034Y6EN77Z"
 aaa_id = "C035F450KA8"
 
